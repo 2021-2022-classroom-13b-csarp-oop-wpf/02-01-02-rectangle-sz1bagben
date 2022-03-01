@@ -14,7 +14,7 @@
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CircleProject\CircleProject.csproj" />
+  <ItemGroup>   
+    <ProjectReference Include="..\RectangleProject\RectangleProject\RectangleProject.csproj" />
   </ItemGroup>
 </Project>

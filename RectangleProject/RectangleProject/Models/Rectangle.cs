@@ -16,16 +16,34 @@ namespace RectangleProject.Models
                 this.sideA = sideA;
                 this.sideB = sideB;
             }
+            else
+            {
+                throw new RectangleSideIsNullOrZero("Az oldal kisebb mint, -vagy egyenlő nullával!");
+            }
         } 
         public double SideA 
         {
             get => sideA;
-            set => sideA = value;
+            set
+            {
+                sideA = value;
+                if (sideA <= 0)
+                {
+                    throw new RectangleSideIsNullOrZero("Az oldal kisebb mint, -vagy egyenlő nullával!");
+                }                
+            }
         }
         public double SideB
         {
             get => sideB;
-            set => sideB = value;
+            set
+            {
+                sideB = value;
+                if (sideB <= 0)
+                {
+                    throw new RectangleSideIsNullOrZero("Az oldal kisebb mint, -vagy egyenlő nullával!");
+                }
+            }
         }
         public double Area { get => sideA * sideB; }
         public double Perimeter { get => 2 * (sideA + sideB); }
